@@ -1,0 +1,171 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgb(240, 240, 240);
+}
+h1 span {
+    color:rgb(236, 110, 0);
+}
+header {
+    color: white;
+    background-color: rgb(44, 64, 73);
+    padding: 25px 0px 15px 30px;
+    font-size: 1.3em;
+    margin: 10px;
+    height: 100px;
+    width: auto;
+}
+header h1, header img {
+    display:inline-block;
+    vertical-align: middle;
+}
+header img {
+    right: 0;
+    width: 30px;
+    height: auto;
+    float: right;
+    margin: 20px 25px 0px 0px;
+}
+
+main {
+    margin: 20px 0px;
+}
+
+h2 {
+    font-size: 1.3em;
+    color: black;
+}
+.flex-container {
+    display: flex;
+    justify-content:space-evenly;
+    align-items: flex-start;
+}
+.main-page > section, .main-page > nav {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.main-page > section {
+    width: 40%;
+    max-width: 450px;
+}
+
+section {
+    margin-left: 10px;
+}
+
+.main-page > nav {
+    margin-top: 0px;
+    width: 40%;
+    max-width: 450px;
+    margin-left: 20px;
+}
+
+p {
+    width:auto;
+    margin: 20px 20px;
+}
+
+a {
+    text-decoration: none;
+    color: maroon;
+}
+
+.link-button {
+    transition: opacity 2s ease;
+    opacity: 0;
+    text-decoration: none;
+    display: block;
+    width:fit-content;
+    color:white;
+    border-radius: 5px;
+    background-color: darkorange;
+    padding: 8px 14px;
+    margin: 0px 0px 10px 25px;
+
+}
+.textbook-pane:hover .link-button {
+    opacity: 1;
+}
+.textbook-pane {
+    background-color: white;
+    height: 60%;
+    width: 20%;
+    margin: 10px 18px 0px 18px;
+    max-height: 600px;
+}
+.textbook-pane:hover {
+    box-shadow: 5px 5px 10px grey;
+}
+.textbook-pane img {
+    width: 100%;
+    height: auto;
+}
+.tb-desc{
+    margin: 30px 25px;
+    width: auto;
+    max-width: 90%;
+    display: block;
+}
+.desc {
+    display: none;
+}
+
+.faculty-info:hover + .desc {
+    display:block;
+}
+
+.faculty-info + .desc {
+    width:100%;
+}
+
+p, a {
+    font-weight:500;
+}
+
+
+
+@media (max-width: 550px) {
+    .main-page > section {
+        display: block;
+        width: 100%;
+        
+    }
+    .main-page > nav {
+        display: block;
+        width: 100%;
+        padding-left: 0px;
+    }
+    h1 {
+        font-size: 1.1em;
+        transform:translate(0, 50%);
+    }
+}
+
+@media (max-width: 770px) {
+    .large-h1 {
+        font-size: 1.1em;
+        transform: translate(0,50%);
+    }
+    .textbook-pane {
+        height: 47%;
+        width: 40%;
+        margin: 10px 18px;
+    }
+    .flex-container {
+        height: 400%;
+        width: auto;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 480px) {
+    .textbook-pane {
+        max-height: 23%;
+        width: 90%;
+    }
+    .flex-container {
+        height: 500%;
+        width: auto;
+        flex-wrap: wrap;
+    }    
+}
